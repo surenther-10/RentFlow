@@ -1,0 +1,138 @@
+/* Authentication Page Styling */
+:root {
+    --primary-gradient: linear-gradient(135deg, #2563eb, #6366f1);
+    --primary-color: #2563eb;
+    --primary-indigo: #6366f1;
+    --text-primary: #1e293b;
+    --text-muted: #64748b;
+    --border-glass: rgba(255, 255, 255, 0.45);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(at 0% 0%, #eef2ff 0, transparent 50%),
+                radial-gradient(at 50% 0%, #e0eafc 0, transparent 50%),
+                radial-gradient(at 100% 0%, #ede9fe 0, transparent 50%),
+                radial-gradient(at 0% 100%, #f8fafc 0, transparent 50%),
+                #f8fafc;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    padding: 20px;
+    letter-spacing: -0.01em;
+}
+
+/* Glassmorphism Auth Card */
+.auth-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid var(--border-glass);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+    padding: 40px;
+    width: 100%;
+    max-width: 520px;
+    transition: all 0.3s ease;
+    animation: fadeInCard 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.brand-logo i {
+    -webkit-text-fill-color: initial;
+    color: var(--primary-color);
+}
+
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 14px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: var(--primary-indigo);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 14px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(135deg, #1d4ed8, #4f46e5);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    border-radius: 12px;
+    font-size: 13.5px;
+    border: 1px solid rgba(0,0,0,0.02) !important;
+}
